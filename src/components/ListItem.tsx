@@ -2,9 +2,10 @@ import { ItemType } from "../__sharedTypes";
 
 interface Props {
   item: ItemType;
+  onRemove: Function;
 }
 
-const ListItem = ({ item }: Props) => {
+const ListItem = ({ item, onRemove }: Props) => {
   return (
     <li>
       <span>
@@ -13,6 +14,9 @@ const ListItem = ({ item }: Props) => {
       <span>{item.author}</span>
       <span>{item.num_comments}</span>
       <span>{item.points}</span>
+      <button type="button" onClick={() => onRemove(item)}>
+        X
+      </button>
     </li>
   );
 };
