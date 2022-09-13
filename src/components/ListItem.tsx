@@ -1,12 +1,7 @@
+import { ItemType } from '../__sharedTypes'
+
 interface Props {
-  item: {
-    title: string,
-    url: string,
-    author: string,
-    num_comments: number,
-    points: number,
-    objectID: number,
-  }
+  item: ItemType
 }
 
 const ListItem = ({item}: Props) => {
