@@ -1,4 +1,5 @@
 import { ItemType } from "../__sharedTypes";
+import ListItem from './ListItem'
 
 interface Props {
   items: ItemType[];
@@ -8,7 +9,7 @@ const List = ({ items }: Props) => {
   return (
     <ul>
       {items.map((item) => {
-        return <div>{item.title}</div>;
+        return <ListItem item={item}/>
       })}
     </ul>
   );
