@@ -1,20 +1,17 @@
-import { ItemType } from '../__sharedTypes'
+import { ItemType } from "../__sharedTypes";
 
 interface Props {
-  items: ItemType[]
+  items: ItemType[];
 }
 
-const List = ({items}: Props) => {
-
+const List = ({ items }: Props) => {
   return (
     <ul>
-    {
-      items.map((item) => {
-        return <div>{item.title}</div>
-      })
-    }
+      {items.map((item) => {
+        return <div>{item.title}</div>;
+      })}
     </ul>
-  )
-}
+  );
+};
 
-export default List
+export default List;
